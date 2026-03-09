@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KMPRK2CF');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17978379720"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17978379720');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Contact &amp; Rendez-vous — Centre Médical Bethesda, Bujumbura</title>
+  <meta name="description"
+    content="Prenez rendez-vous au Centre Médical Bethesda à Bujumbura. Retrouvez notre adresse, numéro de téléphone, horaires d'ouverture et formulaire de contact." />
+  <meta name="keywords" content="contact Bethesda, rendez-vous médecin Bujumbura, adresse clinique, horaires hôpital">
+  <meta name="author" content="Centre Médical Bethesda">
+  <link rel="canonical" href="https://www.cmbethesda.com/contact.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cmbethesda.com/contact.html">
+  <meta property="og:title" content="Contact &amp; Rendez-vous — Centre Médical Bethesda">
+  <meta property="og:description"
+    content="Contactez-nous pour prendre rendez-vous. Horaires, adresse et numéros de téléphone pour joindre le Centre Médical Bethesda à Bujumbura.">
+  <meta property="og:image" content="https://www.cmbethesda.com/images/facebook-cover.png">
+  <meta property="og:site_name" content="Centre Médical Bethesda">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.cmbethesda.com/contact.html">
+  <meta name="twitter:title" content="Contact &amp; Rendez-vous — Centre Médical Bethesda">
+  <meta name="twitter:description"
+    content="Contact et prise de rendez-vous pour vos consultations médicales à Bujumbura.">
+  <meta name="twitter:image" content="https://www.cmbethesda.com/images/facebook-cover.png">
+
+  <!-- Favicon & Styles -->
+  <meta name="theme-color" content="#1B4332">
+  <link rel="icon" type="image/png" href="images/favicon_1.png?v=3">
+  <link rel="apple-touch-icon" href="images/favicon_1.png?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css?v=2" />
+  <style>
+    /* ── Contact-specific styles ── */
+    .sub-hero {
+      background: #1B4332;
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+      color: white;
+    }
+
+    .sub-hero .breadcrumb {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.04em;
+    }
+
+    .sub-hero .breadcrumb a {
+      color: rgba(255, 255, 255, 0.65);
+      text-decoration: none;
+    }
+
+    .sub-hero .breadcrumb a:hover {
+      color: white;
+    }
+
+    .sub-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      line-height: 1.15;
+    }
+
+    .sub-hero .subtitle {
+      max-width: 520px;
+      margin: 0 auto;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* ── Service pre-fill banner ── */
+    .service-prefill-banner {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: rgba(27, 67, 50, 0.08);
+      border-left: 3px solid #1B4332;
+      border-radius: 0 8px 8px 0;
+      padding: 0.65rem 1rem;
+      margin-bottom: 1.1rem;
+      font-size: 0.875rem;
+      color: #1B4332;
+      font-weight: 500;
+      animation: banner-in 0.35s ease;
+    }
+    .service-prefill-banner strong {
+      font-weight: 700;
+      color: #1B4332;
+    }
+    .service-prefill-banner::before {
+      content: '✓';
+      font-weight: 800;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    @keyframes banner-in {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Contact section ── */
+    #contact-section {
+      background: #111827;
+      padding: 3rem 1.5rem;
+      color: white;
+    }
+
+    .contact-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-inner .section-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #E9A115;
+      margin-bottom: 0.35rem;
+      text-align: left;
+    }
+
+    .contact-left h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+      color: white;
+      text-align: left;
+    }
+
+    .contact-left .contact-subtitle {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.93rem;
+      line-height: 1.6;
+      text-align: left;
+      max-width: none;
+      margin: 0 0 1.5rem;
+    }
+
+    /* ── Tab selector ── */
+    .contact-tabs {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: flex-start;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.7rem 1.3rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .contact-tab:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-color: rgba(255, 255, 255, 0.22);
+    }
+
+    .contact-tab.active {
+      background: rgba(233, 161, 21, 0.15);
+      border-color: #E9A115;
+      color: #E9A115;
+      box-shadow: 0 0 20px rgba(233, 161, 21, 0.12);
+    }
+
+    .contact-tab svg {
+      flex-shrink: 0;
+    }
+
+    /* ── Reveal panels ── */
+    .contact-panels {
+      position: relative;
+      min-height: 0;
+    }
+
+    .contact-panel {
+      display: none;
+      animation: panelFadeIn 0.35s ease;
+    }
+
+    .contact-panel.active {
+      display: block;
+    }
+
+    @keyframes panelFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Panel card */
+    .panel-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+
+    .panel-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 0.35rem;
+    }
+
+    .panel-card .panel-desc {
+      font-size: 0.87rem;
+      color: rgba(255, 255, 255, 0.55);
+      margin: 0 0 1.25rem;
+      line-height: 1.5;
+    }
+
+    .phone-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .phone-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.65rem 0.9rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      transition: background 0.2s;
+    }
+
+    .phone-item:hover {
+      background: rgba(45, 106, 79, 0.2);
+    }
+
+    .phone-item .phone-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(45, 106, 79, 0.35);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .phone-item .phone-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+      flex: 1;
+    }
+
+    .phone-item .phone-label {
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+
+    .phone-item a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .phone-item a:hover {
+      color: #E9A115;
+    }
+
+    .phone-item .phone-call-btn {
+      width: 34px;
+      height: 34px;
+      background: #2D6A4F;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .phone-item .phone-call-btn:hover {
+      background: #1B4332;
+      transform: scale(1.08);
+    }
+
+    /* WhatsApp panel CTA */
+    .wa-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 1rem 1.5rem;
+      background: #25D366;
+      color: white;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.28);
+      justify-content: center;
+    }
+
+    .wa-cta:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.38);
+    }
+
+    /* Email panel CTA */
+    .email-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 1rem 1.5rem;
+      background: #2D6A4F;
+      color: white;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(45, 106, 79, 0.25);
+      justify-content: center;
+    }
+
+    .email-cta:hover {
+      background: #1B4332;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(45, 106, 79, 0.35);
+    }
+
+    .email-address-display {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.75);
+      margin: 0 0 1rem;
+      word-break: break-all;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+    }
+
+    /* ── Always-visible info strip ── */
+    .contact-always-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-top: 0;
+    }
+
+    @media (max-width: 540px) {
+
+      .contact-always-info,
+      .contact-right .contact-always-info {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .info-strip-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+    }
+
+    .info-strip-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(45, 106, 79, 0.3);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .info-strip-card .info-strip-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .info-strip-card .info-strip-label {
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+
+    .info-strip-card a,
+    .info-strip-card span {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+
+    .info-strip-card a:hover {
+      color: #E9A115;
+    }
+
+    /* ── Map section below contact tabs ── */
+    .contact-map-section {
+      margin-top: 0;
+    }
+
+    .contact-map-section h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 0.25rem;
+      text-align: left;
+    }
+
+    .contact-map-section .map-subtitle {
+      font-size: 0.83rem;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: left;
+      margin: 0 0 0.75rem;
+    }
+
+    .contact-map-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    /* ── Right column (address + hours + map) ── */
+    .contact-right {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .contact-right .contact-always-info {
+      grid-template-columns: 1fr;
+      margin-top: 0;
+      gap: 0.75rem;
+    }
+
+    /* ── Responsive: stack to single column on tablet/mobile ── */
+    @media (max-width: 768px) {
+      .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .contact-inner .section-eyebrow {
+        text-align: center;
+      }
+
+      .contact-left h2 {
+        text-align: center;
+      }
+
+      .contact-left .contact-subtitle {
+        text-align: center;
+        max-width: 520px;
+        margin: 0 auto 1.5rem;
+      }
+
+      .contact-tabs {
+        justify-content: center;
+      }
+
+      .contact-right {
+        gap: 0;
+        margin-top: 1.75rem;
+      }
+
+      .contact-right .contact-always-info {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 0;
+      }
+
+      .contact-map-section {
+        margin-top: 1.5rem;
+      }
+
+      .contact-map-section h3,
+      .contact-map-section .map-subtitle {
+        text-align: center;
+      }
+    }
+
+    /* Contact form column */
+    .contact-form-col h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 460px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.75);
+      letter-spacing: 0.03em;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 0.72rem 0.95rem;
+      color: white;
+      font-size: 0.92rem;
+      font-family: inherit;
+      transition: border-color 0.2s, background 0.2s;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .form-group select option {
+      background: #1B4332;
+      color: white;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #2D6A4F;
+      background: rgba(45, 106, 79, 0.15);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .form-note {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin: 0;
+      min-height: 1.2em;
+    }
+
+    .form-note.success {
+      color: #6EE7B7;
+    }
+
+    .form-note.error {
+      color: #FCA5A5;
+    }
+
+    /* ── Booking Calendar Section ── */
+    .booking-section {
+      background: linear-gradient(160deg, #0d1f18 0%, #111827 100%);
+      padding: 5rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .booking-section::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      left: -120px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(45, 106, 79, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .booking-section::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(233, 161, 21, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .booking-inner {
+      max-width: 1020px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 3.5rem;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 800px) {
+      .booking-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    .booking-header .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #E9A115;
+      margin-bottom: 0.5rem;
+    }
+
+    .booking-header h2 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 0.6rem;
+      line-height: 1.18;
+    }
+
+    .booking-header p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.93rem;
+      line-height: 1.65;
+      margin: 0 0 1.75rem;
+    }
+
+    /* Date input dark theme */
+    .form-group input[type="date"] {
+      color-scheme: dark;
+    }
+
+    /* Booking form col */
+    .booking-form-col h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 1.25rem;
+    }
+
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .booking-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 460px) {
+      .booking-form .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .booking-form .form-group label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.75);
+      letter-spacing: 0.03em;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 0.72rem 0.95rem;
+      color: white;
+      font-size: 0.92rem;
+      font-family: inherit;
+      transition: border-color 0.2s, background 0.2s;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .booking-form input::placeholder,
+    .booking-form textarea::placeholder {
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .booking-form select option {
+      background: #1B4332;
+      color: white;
+    }
+
+    .booking-form input:focus,
+    .booking-form select:focus,
+    .booking-form textarea:focus {
+      border-color: #2D6A4F;
+      background: rgba(45, 106, 79, 0.15);
+    }
+
+    .booking-form textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      background: #25D366;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 0.9rem 1.5rem;
+      font-size: 0.97rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      width: 100%;
+      text-decoration: none;
+      font-family: inherit;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.28);
+      letter-spacing: 0.01em;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.38);
+    }
+
+    .btn-whatsapp svg {
+      flex-shrink: 0;
+    }
+
+    .booking-note {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.4);
+      text-align: center;
+      margin-top: -0.25rem;
+    }
+
+    /* ── Hours & Access section ── */
+    .hours-section {
+      background: #f7faf8;
+      padding: 4.5rem 1.5rem;
+    }
+
+    .hours-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    @media (max-width: 680px) {
+      .hours-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    .hours-col h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1B4332;
+      margin-bottom: 1.5rem;
+    }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .hours-table tr {
+      border-bottom: 1px solid rgba(45, 106, 79, 0.1);
+    }
+
+    .hours-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .hours-table td {
+      padding: 0.7rem 0.25rem;
+      font-size: 0.92rem;
+      color: #374151;
+    }
+
+    .hours-table td:first-child {
+      font-weight: 600;
+      color: #1B4332;
+      width: 55%;
+    }
+
+    .hours-table td:last-child {
+      text-align: right;
+      color: #4a6060;
+    }
+
+    .hours-table .closed-row td {
+      color: #9CA3AF;
+    }
+
+    .hours-table .special-row td:last-child {
+      color: #E9A115;
+      font-weight: 600;
+    }
+
+    .hours-campaign-note {
+      margin-top: 1.25rem;
+      background: #FFFBEB;
+      border-left: 3px solid #E9A115;
+      padding: 0.85rem 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.87rem;
+      color: #78450A;
+      line-height: 1.6;
+    }
+
+    /* Map column */
+    .map-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .map-col h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1B4332;
+      align-self: flex-start;
+      margin-bottom: 0.25rem;
+    }
+
+    .map-col p {
+      font-size: 0.87rem;
+      color: #4a6060;
+      line-height: 1.6;
+      align-self: flex-start;
+      margin: 0 0 0.5rem;
+    }
+
+    /* ── FAQ section ── */
+    .faq-section {
+      background: white;
+      padding: 4rem 1.5rem;
+    }
+
+    .faq-section .section-title {
+      text-align: center;
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #1B4332;
+      margin-bottom: 2.5rem;
+    }
+
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: #f7faf8;
+      border-radius: 12px;
+      border: 1px solid rgba(45, 106, 79, 0.12);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 1.1rem 1.35rem;
+      font-weight: 700;
+      font-size: 0.97rem;
+      color: #1B4332;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #2D6A4F;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-item .faq-answer {
+      padding: 0 1.35rem 1.1rem;
+      font-size: 0.92rem;
+      color: #4a5568;
+      line-height: 1.65;
+    }
+  </style>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1483412680011645');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1483412680011645&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMPRK2CF" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- TOP BAR + NAV -->
+  <div class="top-bar">
+    <span class="top-bar-phone"><span class="top-bar-label">📞 Appelez ou SMS :</span> <a href="contact.html">+257 79 669 002</a></span>
+    <span class="top-bar-sep" aria-hidden="true">|</span>
+    <a href="contact.html">Prendre RDV →</a>
+    <span class="top-bar-sep" aria-hidden="true">|</span>
+    <a href="campagne.html" class="top-bar-campaign">🎁 Campagne Gratuite →</a>
+  </div>
+  <header id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" style="display: flex; align-items: center;">
+        <img src="images/logo-white-bg.webp" alt="Centre Médical Bethesda Logo" class="brand-logo" />
+      </a>
+      <nav class="desktop-nav">
+        <div class="nav-dropdown">
+          <a class="nav-link" tabindex="0">Nos Services <svg class="dropdown-arrow" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
+          <div class="dropdown-menu">
+            <a href="services/chirurgie.html">Chirurgie</a>
+            <a href="services/gynecologie.html">Gynécologie</a>
+            <a href="services/pediatrie.html">Pédiatrie</a>
+            <a href="services/ophtalmologie.html">Ophtalmologie</a>
+            <a href="services/nephrologie.html">Néphrologie</a>
+            <a href="services/endocrinologie.html">Endocrinologie-diabétologie</a>
+          </div>
+        </div>
+        <a href="campagne.html" class="nav-link">Campagne <span class="nav-badge">Gratuit</span></a>
+        <a href="a-propos.html" class="nav-link">À Propos</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-accent btn-sm">Prendre RDV</a>
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <div class="mobile-services-group">
+        <button class="mobile-services-toggle">Nos Services <svg class="dropdown-arrow" width="16" height="16"
+            viewBox="0 0 12 12" fill="none">
+            <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg></button>
+        <div class="mobile-services-submenu">
+          <a href="services/chirurgie.html">Chirurgie</a>
+          <a href="services/gynecologie.html">Gynécologie</a>
+          <a href="services/pediatrie.html">Pédiatrie</a>
+          <a href="services/ophtalmologie.html">Ophtalmologie</a>
+          <a href="services/nephrologie.html">Néphrologie</a>
+          <a href="services/endocrinologie.html">Endocrinologie-diabétologie</a>
+        </div>
+      </div>
+      <a href="campagne.html">Campagne Médicale</a>
+      <a href="a-propos.html">À Propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-accent"
+        style="margin-top:0.5rem;text-align:center;justify-content:center;">Prendre Rendez-vous</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO: BOOKING SECTION -->
+    <section class="booking-section" id="reserver" style="padding-top:7rem;padding-bottom:5rem;">
+      <div style="max-width:640px;margin:0 auto;position:relative;z-index:1;">
+
+        <!-- Hero text -->
+        <div class="booking-header" style="text-align:center;margin-bottom:2.5rem;">
+          <p class="breadcrumb"
+            style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-bottom:1rem;letter-spacing:0.04em;">
+            <a href="index.html" style="color:rgba(255,255,255,0.5);text-decoration:none;">Accueil</a> &rsaquo;
+            Contact
+          </p>
+          <p class="section-eyebrow">Réservation en ligne</p>
+          <h1
+            style="font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:900;color:white;line-height:1.15;margin:0 0 0.6rem;">
+            Prenez Rendez-vous<br><span
+              style="font-size: 0.65em; font-weight: 500; color: rgba(255,255,255,0.9);">Gihosha, Près de la Gare du
+              Nord</span>
+          </h1>
+          <p style="color:rgba(255,255,255,0.65);font-size:0.93rem;line-height:1.65;max-width:480px;margin:0 auto;">
+            Remplissez le formulaire ci-dessous pour demander un rendez-vous.
+            Notre équipe vous recontactera dans les plus brefs délais.
+          </p>
+        </div>
+
+        <!-- Single form with date & time inside -->
+        <div class="booking-form-col">
+          <!-- Service pre-fill banner (shown via JS when ?service= param present) -->
+          <div id="service-prefill-banner" style="display:none;" class="service-prefill-banner"></div>
+          <form class="booking-form" id="bookingForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b_firstname">Prénom *</label>
+                <input type="text" id="b_firstname" name="firstname" placeholder="Votre prénom"
+                  autocomplete="given-name" required />
+              </div>
+              <div class="form-group">
+                <label for="b_lastname">Nom *</label>
+                <input type="text" id="b_lastname" name="lastname" placeholder="Votre nom" autocomplete="family-name"
+                  required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b_tel">Téléphone *</label>
+                <input type="tel" id="b_tel" name="phone_number" placeholder="+257 …" autocomplete="tel" required />
+              </div>
+              <div class="form-group">
+                <label for="b_email">Email *</label>
+                <input type="email" id="b_email" name="email" placeholder="votre@email.com" autocomplete="email"
+                  required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="b_service">Service souhaité *</label>
+              <select id="b_service" name="service" required>
+                <option value="" disabled selected>Choisir un service…</option>
+                <option value="Chirurgie">Chirurgie</option>
+                <option value="Gynécologie">Gynécologie</option>
+                <option value="Pédiatrie">Pédiatrie</option>
+                <option value="Ophtalmologie">Ophtalmologie</option>
+                <option value="Néphrologie">Néphrologie</option>
+                <option value="Endocrinologie / Diabétologie">Endocrinologie / Diabétologie</option>
+                <option value="Campagne gratuite (Mars 2026)">Campagne gratuite (Mars 2026)</option>
+                <option value="Autre / Consultation générale">Autre / Consultation générale</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b_date">Date souhaitée *</label>
+                <input type="date" id="b_date" name="appointment_date" required />
+              </div>
+              <div class="form-group">
+                <label for="b_time">Créneau horaire *</label>
+                <select id="b_time" name="appointment_time" required>
+                  <option value="" disabled selected>Choisir un créneau…</option>
+                  <option value="07:30">07:30</option>
+                  <option value="08:00">08:00</option>
+                  <option value="08:30">08:30</option>
+                  <option value="09:00">09:00</option>
+                  <option value="09:30">09:30</option>
+                  <option value="10:00">10:00</option>
+                  <option value="10:30">10:30</option>
+                  <option value="11:00">11:00</option>
+                  <option value="11:30">11:30</option>
+                  <option value="14:00">14:00</option>
+                  <option value="14:30">14:30</option>
+                  <option value="15:00">15:00</option>
+                  <option value="15:30">15:30</option>
+                  <option value="16:00">16:00</option>
+                  <option value="16:30">16:30</option>
+                  <option value="17:00">17:00</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="b_msg">Message (optionnel)</label>
+              <textarea id="b_msg" name="message" rows="3"
+                placeholder="Précisez votre motif de consultation, symptômes ou questions…"></textarea>
+            </div>
+            <button type="submit" class="btn-whatsapp" id="bookingSubmit" style="background: #E9A115; color: white;">
+              Confirmer le Rendez-vous
+            </button>
+            <p class="booking-note">Notre équipe vous contactera rapidement pour confirmer votre rendez-vous.</p>
+            <p style="font-size:0.78rem;color:#FCA5A5;min-height:1.2em;" id="bookingError" aria-live="polite"></p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COORDONNÉES + LOCALISATION -->
+    <section id="contact-section">
+      <div class="contact-inner">
+
+        <!-- LEFT: heading + tabs + panels -->
+        <div class="contact-left">
+
+          <p class="section-eyebrow">Coordonnées</p>
+          <h2>Comment Nous Contacter</h2>
+          <p class="contact-subtitle">Choisissez votre moyen de contact préféré ci-dessous.</p>
+
+          <!-- Tab selector -->
+          <div class="contact-tabs">
+            <button class="contact-tab active" data-tab="phone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg>
+              Téléphone
+            </button>
+            <button class="contact-tab" data-tab="whatsapp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+              </svg>
+              WhatsApp
+            </button>
+            <button class="contact-tab" data-tab="email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              Email
+            </button>
+          </div>
+
+          <!-- Panels -->
+          <div class="contact-panels">
+
+            <!-- Phone panel -->
+            <div class="contact-panel active" id="panel-phone">
+              <div class="panel-card">
+                <h3>Appelez-nous</h3>
+                <p class="panel-desc">Notre équipe est joignable par téléphone du lundi au samedi pendant les heures
+                  d'ouverture.</p>
+                <ul class="phone-list">
+                  <li class="phone-item">
+                    <div class="phone-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E9A115" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                      </svg>
+                    </div>
+                    <div class="phone-info">
+                      <span class="phone-label">Ligne principale</span>
+                      <a href="tel:+25779669002">+257 79 669 002</a>
+                    </div>
+                    <a href="tel:+25779669002" class="phone-call-btn" aria-label="Appeler +257 79 669 002">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="phone-item">
+                    <div class="phone-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E9A115" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                      </svg>
+                    </div>
+                    <div class="phone-info">
+                      <span class="phone-label">Ligne 2</span>
+                      <a href="tel:+25777526626">+257 77 526 626</a>
+                    </div>
+                    <a href="tel:+25777526626" class="phone-call-btn" aria-label="Appeler +257 77 526 626">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="phone-item">
+                    <div class="phone-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E9A115" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                      </svg>
+                    </div>
+                    <div class="phone-info">
+                      <span class="phone-label">Ligne 3</span>
+                      <a href="tel:+25767866275">+257 67 866 275</a>
+                    </div>
+                    <a href="tel:+25767866275" class="phone-call-btn" aria-label="Appeler +257 67 866 275">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- WhatsApp panel -->
+            <div class="contact-panel" id="panel-whatsapp">
+              <div class="panel-card">
+                <h3>Écrivez-nous sur WhatsApp</h3>
+                <p class="panel-desc">Envoyez-nous un message et recevez une réponse rapide. Disponible 7j/7.</p>
+                <a href="https://wa.me/25779669002" target="_blank" rel="noopener" class="wa-cta">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                  </svg>
+                  Envoyer un message WhatsApp
+                </a>
+                <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);text-align:center;margin-top:0.75rem;">Numéro :
+                  +257 79 669 002</p>
+              </div>
+            </div>
+
+            <!-- Email panel -->
+            <div class="contact-panel" id="panel-email">
+              <div class="panel-card">
+                <h3>Envoyez-nous un email</h3>
+                <p class="panel-desc">Pour les demandes administratives, devis ou toute question non urgente.</p>
+                <p class="email-address-display">bethesda2026centremedical@gmail.com</p>
+                <a href="mailto:bethesda2026centremedical@gmail.com" class="email-cta">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  Envoyer un email
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div><!-- /.contact-left -->
+
+        <!-- RIGHT: address + hours + map -->
+        <div class="contact-right">
+
+          <!-- Always visible: address & hours -->
+          <div class="contact-always-info">
+            <div class="info-strip-card">
+              <div class="info-strip-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E9A115" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div class="info-strip-detail">
+                <span class="info-strip-label">Adresse</span>
+                <a href="https://maps.google.com/?q=J9WQ%2BQQR+Bujumbura" target="_blank" rel="noopener">Commune
+                  NTAHANGWA, Zone Gihosha<br>Avenue Karava N° 3, Bujumbura</a>
+              </div>
+            </div>
+            <div class="info-strip-card">
+              <div class="info-strip-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E9A115" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <div class="info-strip-detail">
+                <span class="info-strip-label">Horaires d'ouverture</span>
+                <span>Lun – Ven : 7h30 – 17h30<br>Sam : 8h00 – 14h00 · Dim : Urgences</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="contact-map-section">
+            <h3>Localisation</h3>
+            <p class="map-subtitle">Avenue Karava N°3, Commune NTAHANGWA, Zone Gihosha, Bujumbura</p>
+            <div
+              style="border-radius:14px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.35);border:1.5px solid rgba(255,255,255,0.1);">
+              <div id="map" style="width: 100%; height: 280px; display: block;"></div>
+            </div>
+            <div class="contact-map-actions">
+              <a href="https://maps.google.com/?q=J9WQ%2BQQR+Bujumbura" target="_blank" rel="noopener"
+                style="display:inline-flex;align-items:center;gap:0.45rem;padding:0.6rem 1.1rem;background:#2D6A4F;color:white;border-radius:8px;font-size:0.85rem;font-weight:700;text-decoration:none;"
+                onmouseover="this.style.background='#1B4332'" onmouseout="this.style.background='#2D6A4F'">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Obtenir l'itinéraire
+              </a>
+              <a href="https://wa.me/25779669002" target="_blank" rel="noopener"
+                style="display:inline-flex;align-items:center;gap:0.45rem;padding:0.6rem 1.1rem;background:#25D366;color:white;border-radius:8px;font-size:0.85rem;font-weight:700;text-decoration:none;"
+                onmouseover="this.style.background='#1ebe5d'" onmouseout="this.style.background='#25D366'">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                </svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+
+        </div><!-- /.contact-right -->
+
+      </div><!-- /.contact-inner -->
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">Questions sur les Rendez-vous</h2>
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>Comment réserver un rendez-vous en ligne ?</summary>
+            <div class="faq-answer">
+              C'est simple : sélectionnez votre date et votre créneau horaire dans le calendrier en haut de cette page,
+              renseignez votre nom, votre numéro de téléphone et le service souhaité, puis cliquez sur
+              <strong>«&nbsp;Confirmer via WhatsApp&nbsp;»</strong>. Vous serez redirigé vers WhatsApp avec tous les
+              détails pré-remplis. Notre équipe confirmera votre rendez-vous dans les plus brefs délais.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Dois-je avoir une assurance maladie pour consulter ?</summary>
+            <div class="faq-answer">
+              Non. Le Centre Médical Bethesda est accessible à tous, qu'elle que soit votre couverture médicale. Nous
+              proposons des tarifs adaptés à différentes situations. N'hésitez pas à nous contacter pour plus
+              d'informations sur les modalités de paiement.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Puis-je annuler ou reporter mon rendez-vous ?</summary>
+            <div class="faq-answer">
+              Oui, bien sûr. Si vous souhaitez annuler ou modifier la date de votre rendez-vous, veuillez nous prévenir
+              <strong>au moins 24 heures à l'avance</strong> en nous appelant au <a href="tel:+25779669002"
+                style="color:#2D6A4F;font-weight:600;">+257 79 669 002</a> ou en nous envoyant un message sur WhatsApp.
+              Aucun frais ne sera appliqué en cas d'annulation dans ce délai.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Quels documents dois-je apporter lors de ma consultation ?</summary>
+            <div class="faq-answer">
+              Nous vous recommandons d'apporter : votre <strong>carnet de santé</strong> (si vous en avez un), tout
+              <strong>résultat d'analyses ou d'imagerie</strong> antérieur, et vos <strong>ordonnances en
+                cours</strong>. Ces documents permettent à nos médecins d'assurer un suivi optimal dès la première
+              consultation.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Comment venir au Centre Médical Bethesda ?</summary>
+            <div class="faq-answer">
+              Nous sommes situés <strong>Avenue Karava N°3, Commune NTAHANGWA, Zone Gihosha, Bujumbura</strong>. Le
+              centre est facilement accessible en taxi, moto-taxi ou en bus depuis le centre-ville. Vous pouvez utiliser
+              le code de localisation <strong>J9WQ+QQR Bujumbura</strong> sur Google Maps pour un itinéraire précis.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Quels sont les délais d'attente pour un rendez-vous ?</summary>
+            <div class="faq-answer">
+              Les délais varient selon la spécialité et la disponibilité des médecins. En général, les rendez-vous sont
+              disponibles dans un délai de <strong>1 à 3 jours ouvrables</strong>. Pour les urgences, appelez-nous
+              directement au <a href="tel:+25779669002" style="color:#2D6A4F;font-weight:600;">+257 79 669 002</a> pour
+              être orienté immédiatement.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+
+      <!-- Top Bar: CTA -->
+      <div class="footer-top-bar">
+        <a href="contact.html" class="footer-cta-btn">Prendre Rendez-vous</a>
+      </div>
+
+      <!-- 4-Column Links -->
+      <div class="footer-columns">
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services/chirurgie.html">Chirurgie</a>
+          <a href="services/gynecologie.html">Gynécologie</a>
+          <a href="services/pediatrie.html">Pédiatrie</a>
+          <a href="services/ophtalmologie.html">Ophtalmologie</a>
+          <a href="services/nephrologie.html">Néphrologie</a>
+          <a href="services/endocrinologie.html">Endocrinologie</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Nos Services</a>
+          <a href="campagne.html">Campagne 2026</a>
+          <a href="a-propos.html">À Propos</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+25779669002">+257 79 669 002</a>
+          <a href="tel:+25777526626">+257 77 526 626</a>
+          <a href="tel:+25767866275">+257 67 866 275</a>
+          <a href="mailto:bethesda2026centremedical@gmail.com">bethesda2026centremedical@gmail.com</a>
+          <span class="footer-info">Commune NTAHANGWA, Zone Gihosha<br>Avenue Karava N° 3, Bujumbura</span>
+        </div>
+
+        <div class="footer-col">
+          <h4>Aide</h4>
+          <a href="contact.html">Prendre Rendez-vous</a>
+          <a href="campagne.html">Campagne Gratuite</a>
+          <a href="a-propos.html">Notre Mission</a>
+          <a href="politique-de-confidentialite.html">Confidentialité</a>
+          <a href="conditions-generales.html">Conditions</a>
+          <a href="https://maps.google.com/?q=J9WQ%2BQQR+Bujumbura" target="_blank" rel="noopener">Nous Trouver</a>
+          <a href="/login">Espace Secrétariat</a>
+        </div>
+
+      </div>
+
+      <!-- Back to Top -->
+      <div class="footer-back-top">
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+          Retour en haut
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5" />
+            <path d="M5 12l7-7 7 7" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="container">
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <p>© 2026 Centre Médical Bethesda — Bujumbura, Burundi.
+            <a href="politique-de-confidentialite.html"
+              style="text-decoration: underline; margin-left: 10px;">Confidentialité</a> |
+            <a href="conditions-generales.html" style="text-decoration: underline; margin-left: 5px;">Conditions</a>
+          </p>
+        </div>
+        <div class="footer-bottom-right">
+          <a href="https://www.facebook.com/centremedicalbethesda" class="social-link" aria-label="Facebook"
+            target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+            </svg>
+          </a>
+          <a href="https://wa.me/25779669002" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/cm_bethesda" class="social-link" aria-label="Instagram" target="_blank"
+            rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    // ── Booking Form → HubSpot Submission ──
+    (function () {
+      const bookingForm = document.getElementById('bookingForm');
+      const bookingError = document.getElementById('bookingError');
+      const dateInput = document.getElementById('b_date');
+
+      // Set min date to today
+      const today = new Date();
+      dateInput.setAttribute('min', [
+        today.getFullYear(),
+        String(today.getMonth() + 1).padStart(2, '0'),
+        String(today.getDate()).padStart(2, '0')
+      ].join('-'));
+
+      bookingForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        bookingError.textContent = '';
+
+        const firstname = document.getElementById('b_firstname').value.trim();
+        const lastname = document.getElementById('b_lastname').value.trim();
+        const tel = document.getElementById('b_tel').value.trim();
+        const email = document.getElementById('b_email').value.trim();
+        const service = document.getElementById('b_service').value;
+        const dateVal = dateInput.value;
+        const timeVal = document.getElementById('b_time').value;
+        const msg = document.getElementById('b_msg').value.trim();
+
+        if (!firstname) { bookingError.textContent = 'Veuillez entrer votre prénom.'; return; }
+        if (!lastname) { bookingError.textContent = 'Veuillez entrer votre nom.'; return; }
+        if (!tel) { bookingError.textContent = 'Veuillez entrer votre numéro de téléphone.'; return; }
+        if (!email) { bookingError.textContent = 'Veuillez entrer votre adresse email.'; return; }
+        if (!service) { bookingError.textContent = 'Veuillez choisir un service.'; return; }
+        if (!dateVal) { bookingError.textContent = 'Veuillez sélectionner une date.'; return; }
+        if (!timeVal) { bookingError.textContent = 'Veuillez choisir un créneau horaire.'; return; }
+
+        // Format date for HubSpot (YYYY-MM-DD keeps it clean and unambiguous)
+        const hubspotData = {
+          fields: [
+            { name: 'firstname', value: firstname },
+            { name: 'lastname', value: lastname },
+            { name: 'email', value: email },
+            { name: 'phone_number', value: tel },
+            { name: 'hs_whatsapp_phone_number', value: tel },
+            { name: 'service', value: service },
+            { name: 'appointment_date', value: dateVal },
+            { name: 'appointment_time', value: timeVal },
+            { name: 'message', value: msg || 'Aucun message.' }
+          ],
+          context: {
+            pageUri: window.location.href,
+            pageName: document.title
+          }
+        };
+
+        const submitBtn = document.getElementById('bookingSubmit');
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Envoi en cours...';
+        submitBtn.disabled = true;
+
+        const portalId = '147937804';
+        const formGuid = '58582f14-bca2-46e5-8c85-3f5bf84e4fec';
+        const hubspotUrl = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`;
+
+        fetch(hubspotUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(hubspotData)
+        })
+          .then(function (response) {
+            if (response.ok) {
+              // ✅ Google Ads conversion — fires only on confirmed successful submission
+              if (typeof gtag === 'function') {
+                gtag('event', 'conversion', { send_to: 'AW-17978379720/LxKoCOCdpYIcEMib4fxC' });
+              }
+              // Also push to dataLayer for GTM (GTM-KMPRK2CF)
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({ event: 'ads_conversion_form_submit' });
+              submitBtn.innerHTML = '✓ Demande envoyée !';
+              submitBtn.style.background = '#2D6A4F';
+              setTimeout(function () {
+                bookingForm.reset();
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.style.background = '#E9A115';
+                submitBtn.disabled = false;
+                alert('Merci ! Votre demande a été reçue. Nous vous contacterons rapidement.');
+              }, 2500);
+            } else {
+              return response.json().then(function (errorData) {
+                console.error('HubSpot error:', errorData);
+                throw new Error((errorData.errors && errorData.errors[0] && errorData.errors[0].message) || errorData.message || response.statusText);
+              });
+            }
+          })
+          .catch(function (err) {
+            console.error('Submission error:', err);
+            bookingError.textContent = "Une erreur est survenue lors de l'envoi : " + err.message;
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+          });
+      });
+    })();
+  </script>
+
+  <script>
+    // ── URL ?service= Pre-fill ──
+    (function () {
+      var SERVICE_MAP = {
+        'chirurgie':     'Chirurgie',
+        'gynecologie':   'Gynécologie',
+        'pediatrie':     'Pédiatrie',
+        'ophtalmologie': 'Ophtalmologie',
+        'nephrologie':   'Néphrologie',
+        'endocrinologie':'Endocrinologie / Diabétologie',
+        'campagne':      'Campagne gratuite (Mars 2026)',
+      };
+
+      var params = new URLSearchParams(window.location.search);
+      var slug   = (params.get('service') || '').toLowerCase().trim();
+      if (!slug) return;
+
+      var value  = SERVICE_MAP[slug];
+      if (!value) return;
+
+      // Pre-select the service dropdown
+      var select = document.getElementById('b_service');
+      if (select) {
+        select.value = value;
+        select.dispatchEvent(new Event('change'));
+        // Highlight the select briefly
+        select.style.transition = 'box-shadow 0.3s ease';
+        select.style.boxShadow  = '0 0 0 3px rgba(27,67,50,0.25)';
+        setTimeout(function () { select.style.boxShadow = ''; }, 2000);
+      }
+
+      // Show the pre-fill banner
+      var banner = document.getElementById('service-prefill-banner');
+      if (banner) {
+        banner.innerHTML = 'Service pré-sélectionné : <strong>' + value + '</strong>';
+        banner.style.display = 'flex';
+      }
+
+      // Smooth-scroll to the booking form
+      var form = document.getElementById('bookingForm');
+      if (form) {
+        setTimeout(function () {
+          form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 200);
+      }
+    })();
+  </script>
+
+  <!-- HubSpot Tracking Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147937804.js"></script>
+
+  <script>
+    // ── Contact Tabs Logic ──
+    (function () {
+      const tabs = document.querySelectorAll('.contact-tab');
+      const panels = document.querySelectorAll('.contact-panel');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          const target = this.getAttribute('data-tab');
+          tabs.forEach(function (t) { t.classList.remove('active'); });
+          panels.forEach(function (p) { p.classList.remove('active'); });
+          this.classList.add('active');
+          document.getElementById('panel-' + target).classList.add('active');
+        });
+      });
+    })();
+  </script>
+  <script src="js/mapbox-animation.js"></script>
+
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/25779669002" class="floating-whatsapp" target="_blank" rel="noopener"
+    aria-label="Contactez-nous sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.662-2.062-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+    </svg>
+  </a>
+  <!-- WhatsApp Float -->
+  <a class="whatsapp-float" href="https://wa.me/25779669002" target="_blank" rel="noopener noreferrer" aria-label="Discuter sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</body>
+
+</html>

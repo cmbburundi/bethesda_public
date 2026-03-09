@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KMPRK2CF');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17978379720"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17978379720');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Campagne Médicale Gratuite 2026 — Centre Médical Bethesda</title>
+  <meta name="description"
+    content="Participez à la campagne médicale gratuite les 16 et 17 mars 2026 au Centre Médical Bethesda à Bujumbura. Consultations, dépistages et médicaments offerts." />
+  <meta name="keywords"
+    content="campagne médicale gratuite, dépistage diabète Bujumbura, dépistage hypertension Burundi, consultations gratuites, Bethesda">
+  <meta name="author" content="Centre Médical Bethesda">
+  <link rel="canonical" href="https://www.cmbethesda.com/campagne.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cmbethesda.com/campagne.html">
+  <meta property="og:title" content="Campagne Médicale Gratuite 2026 — Centre Médical Bethesda">
+  <meta property="og:description"
+    content="Les 16 et 17 mars 2026 à Bujumbura : consultations spécialisées et dépistages entièrement gratuits.">
+  <meta property="og:image" content="https://www.cmbethesda.com/images/post-j19-campagne.png">
+  <meta property="og:site_name" content="Centre Médical Bethesda">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.cmbethesda.com/campagne.html">
+  <meta name="twitter:title" content="Campagne Médicale Gratuite 2026">
+  <meta name="twitter:description"
+    content="Participez à notre campagne médicale gratuite les 16 et 17 mars à Bujumbura.">
+  <meta name="twitter:image" content="https://www.cmbethesda.com/images/post-j19-campagne.png">
+
+  <!-- Favicon & Styles -->
+  <meta name="theme-color" content="#1B4332">
+  <link rel="icon" type="image/png" href="images/favicon_1.png?v=3">
+  <link rel="apple-touch-icon" href="images/favicon_1.png?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css?v=2" />
+  <style>
+    /* ── Campagne-specific styles ── */
+    .sub-hero {
+      background: #1B4332;
+      padding: 4rem 1.5rem 4rem;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sub-hero-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .sub-hero-text {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .sub-hero-visual {
+      flex: 0 0 420px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sub-hero-visual img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      /* Optional slight rotation/levitation effect can go here */
+      transform: translateY(10px);
+    }
+
+    @media (max-width: 900px) {
+      .sub-hero-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .sub-hero-text {
+        max-width: 100%;
+      }
+
+      .sub-hero-visual {
+        flex: 0 0 auto;
+        max-width: 400px;
+        margin-top: 2rem;
+      }
+    }
+
+    .sub-hero .breadcrumb {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.04em;
+    }
+
+    .sub-hero .breadcrumb a {
+      color: rgba(255, 255, 255, 0.65);
+      text-decoration: none;
+    }
+
+    .sub-hero .breadcrumb a:hover {
+      color: white;
+    }
+
+    .sub-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      line-height: 1.15;
+    }
+
+    .sub-hero .subtitle {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* ── Campaign main section ── */
+    .campaign-section {
+      background: #fff;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .event-card {
+      background: #E9A115;
+      color: white;
+      text-align: center;
+      border-radius: 16px;
+      padding: 2rem 2.5rem;
+      max-width: 560px;
+      margin: 0 auto 3rem;
+      box-shadow: 0 8px 32px rgba(233, 161, 21, 0.28);
+    }
+
+    .event-card h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      margin-bottom: 0.4rem;
+      line-height: 1.1;
+    }
+
+    .event-card p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      opacity: 0.95;
+      margin: 0;
+    }
+
+    .campaign-inner {
+      max-width: 960px;
+      margin: 0 auto 3rem;
+    }
+
+    .campaign-text h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #1B4332;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .campaign-services-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 2.5rem;
+    }
+
+    @media (max-width: 720px) {
+      .campaign-services-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .campaign-services-list li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.97rem;
+      line-height: 1.55;
+      color: #2d3748;
+    }
+
+    .campaign-services-list .check-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: #2D6A4F;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .campaign-services-list .check-icon svg {
+      display: block;
+    }
+
+    .campaign-services-list .check-icon svg {
+      display: block;
+    }
+
+    .info-box {
+      background: #FFFBEB;
+      border: 1.5px solid #E9A115;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      max-width: 960px;
+      margin: 0 auto 0;
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      font-size: 0.93rem;
+      color: #1a0a00;
+      line-height: 1.55;
+    }
+
+    .info-box svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ── Free services grid ── */
+    .free-services-section {
+      background: #f7faf8;
+      padding: 4rem 1.5rem;
+    }
+
+    .free-services-section .section-title {
+      text-align: center;
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #1B4332;
+      margin-bottom: 2.5rem;
+    }
+
+    .free-services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 580px) {
+      .free-services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .free-service-card {
+      background: white;
+      border-radius: 14px;
+      padding: 1.75rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(45, 106, 79, 0.08);
+      border: 1px solid rgba(45, 106, 79, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: block;
+    }
+
+    .free-service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 24px rgba(45, 106, 79, 0.13);
+    }
+
+    .free-service-card .card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .free-service-card .card-icon {
+      width: 52px;
+      height: 52px;
+      background: #E8F5EE;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .free-service-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1B4332;
+      margin: 0;
+    }
+
+    .free-service-card p {
+      font-size: 0.9rem;
+      color: #4a6060;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 580px) {
+      .free-service-card .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+    }
+
+    /* ── FAQ section ── */
+    .faq-section {
+      background: #FDF6EC;
+      padding: 4rem 1.5rem;
+    }
+
+    .faq-section .section-title {
+      text-align: center;
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #1B4332;
+      margin-bottom: 2.5rem;
+    }
+
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid rgba(233, 161, 21, 0.2);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 1.1rem 1.35rem;
+      font-weight: 700;
+      font-size: 0.97rem;
+      color: #1B4332;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #E9A115;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-item .faq-answer {
+      padding: 0 1.35rem 1.1rem;
+      font-size: 0.92rem;
+      color: #4a5568;
+      line-height: 1.65;
+    }
+
+    /* ── Location/access section ── */
+    .acces-section {
+      background: #1B4332;
+      padding: 4rem 1.5rem;
+      color: white;
+    }
+
+    .acces-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (max-width: 640px) {
+      .acces-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .acces-section .section-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #E9A115;
+      margin-bottom: 0.5rem;
+    }
+
+    .acces-section h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 1.25rem;
+      color: white;
+    }
+
+    .acces-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .acces-row {
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+      font-size: 0.94rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.5;
+    }
+
+    .acces-row svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .acces-section a.maps-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1.5rem;
+      background: #E9A115;
+      color: white;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.65rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .acces-section a.maps-link:hover {
+      background: #d4920f;
+    }
+
+    /* ── CTA band ── */
+    .cta-band {
+      background: #f7faf8;
+      padding: 4rem 1.5rem;
+      text-align: center;
+      color: #1B4332;
+    }
+
+    .cta-band h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: #1B4332;
+    }
+
+    .cta-band p {
+      color: #3a4a42;
+      font-size: 1rem;
+      max-width: 500px;
+      margin: 0 auto 1.75rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+  </style>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1483412680011645');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1483412680011645&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMPRK2CF" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- TOP BAR + NAV -->
+  <div class="top-bar">
+    <span class="top-bar-phone"><span class="top-bar-label">📞 Appelez ou SMS :</span> <a href="contact.html?service=campagne">+257 79 669 002</a></span>
+    <span class="top-bar-sep" aria-hidden="true">|</span>
+    <a href="contact.html?service=campagne">Prendre RDV →</a>
+    <span class="top-bar-sep" aria-hidden="true">|</span>
+    <a href="campagne.html" class="top-bar-campaign">🎁 Campagne Gratuite →</a>
+  </div>
+  <header id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" style="display: flex; align-items: center;">
+        <img src="images/logo-white-bg.webp" alt="Centre Médical Bethesda Logo" class="brand-logo" />
+      </a>
+      <nav class="desktop-nav">
+        <div class="nav-dropdown">
+          <a class="nav-link" tabindex="0">Nos Services <svg class="dropdown-arrow" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
+          <div class="dropdown-menu">
+            <a href="services/chirurgie.html">Chirurgie</a>
+            <a href="services/gynecologie.html">Gynécologie</a>
+            <a href="services/pediatrie.html">Pédiatrie</a>
+            <a href="services/ophtalmologie.html">Ophtalmologie</a>
+            <a href="services/nephrologie.html">Néphrologie</a>
+            <a href="services/endocrinologie.html">Endocrinologie-diabétologie</a>
+          </div>
+        </div>
+        <a href="campagne.html" class="nav-link active">Campagne <span class="nav-badge">Gratuit</span></a>
+        <a href="a-propos.html" class="nav-link">À Propos</a>
+        <a href="contact.html?service=campagne" class="nav-link">Contact</a>
+      </nav>
+      <a href="contact.html?service=campagne" class="btn btn-accent btn-sm">Prendre RDV</a>
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <div class="mobile-services-group">
+        <button class="mobile-services-toggle">Nos Services <svg class="dropdown-arrow" width="16" height="16"
+            viewBox="0 0 12 12" fill="none">
+            <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg></button>
+        <div class="mobile-services-submenu">
+          <a href="services/chirurgie.html">Chirurgie</a>
+          <a href="services/gynecologie.html">Gynécologie</a>
+          <a href="services/pediatrie.html">Pédiatrie</a>
+          <a href="services/ophtalmologie.html">Ophtalmologie</a>
+          <a href="services/nephrologie.html">Néphrologie</a>
+          <a href="services/endocrinologie.html">Endocrinologie-diabétologie</a>
+        </div>
+      </div>
+      <a href="campagne.html">Campagne Médicale</a>
+      <a href="a-propos.html">À Propos</a>
+      <a href="contact.html?service=campagne">Contact</a>
+      <a href="contact.html?service=campagne" class="btn btn-accent"
+        style="margin-top:0.5rem;text-align:center;justify-content:center;">Prendre Rendez-vous</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 1. SUB-HERO -->
+    <section class="sub-hero">
+      <div class="sub-hero-inner container">
+        <div class="sub-hero-text">
+          <p class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Campagne Médicale</p>
+          <h1>Campagne Médicale Gratuite 2026</h1>
+          <p class="subtitle">À toute la population burundaise</p>
+        </div>
+        <div class="sub-hero-visual">
+          <img loading="lazy" src="images/campagne.webp" alt="Illustration Campagne Médicale Bethesda" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. MAIN CAMPAIGN SECTION -->
+    <section class="campaign-section">
+      <div class="container">
+
+        <!-- Event card -->
+        <div class="event-card" style="margin-top: -5rem; position: relative; z-index: 10;">
+          <h2>16 – 17 Mars 2026</h2>
+          <p>7h30 – 17h30 &nbsp;|&nbsp; Entrée libre et gratuite</p>
+        </div>
+
+        <!-- 1-col layout for the services -->
+        <div class="campaign-inner">
+          <div class="campaign-text">
+            <h2>Services Gratuits Offerts</h2>
+            <ul class="campaign-services-list">
+              <li>
+                <span class="check-icon">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span><strong>Consultations spécialisées&nbsp;:</strong> chirurgie, gynécologie, pédiatrie,
+                  ophtalmologie, néphrologie, endocrinologie-diabétologie</span>
+              </li>
+              <li>
+                <span class="check-icon">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span><strong>Dépistage</strong> de l'hypertension artérielle (HTA), du diabète et de la goutte</span>
+              </li>
+              <li>
+                <span class="check-icon">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span><strong>Échographies obstétricales gratuites</strong> pour les femmes enceintes</span>
+              </li>
+              <li>
+                <span class="check-icon">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span><strong>Médicaments offerts</strong> aux patients diagnostiqués (HTA, diabète, goutte)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Info box -->
+        <div class="info-box"
+          style="flex-direction: column; gap: 1rem; align-items: stretch; background: #FFFDF5; border-color: #F8cfa0;">
+          <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E9A115" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px;">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+            <div>
+              <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #b07000;">Médicaments Gratuits</h3>
+              <p style="margin: 0; color: #3a2e20; line-height: 1.5;">Les patients diagnostiqués au cours de la campagne
+                recevront gratuitement un traitement initial offert par le Centre Médical Bethesda pour les pathologies
+                suivantes :</p>
+            </div>
+          </div>
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 0.5rem;">
+            <div
+              style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid rgba(233,161,21,0.2); display: flex; align-items: center; gap: 0.75rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+              <strong style="color: #1a0a00;">Hypertension Artérielle</strong>
+            </div>
+            <div
+              style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid rgba(233,161,21,0.2); display: flex; align-items: center; gap: 0.75rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C8 8 5 12.5 5 15.5a7 7 0 0014 0C19 12.5 16 8 12 2z" />
+                <path d="M12 18v-4" />
+                <path d="M9.5 15.5h5" />
+              </svg>
+              <strong style="color: #1a0a00;">Diabète</strong>
+            </div>
+            <div
+              style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid rgba(233,161,21,0.2); display: flex; align-items: center; gap: 0.75rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 13h18" />
+                <path d="M8 17a2 2 0 1 1-4 0V9a2 2 0 1 1 4 0v8Z" />
+                <path d="M16 17a2 2 0 1 0 4 0V9a2 2 0 1 0-4 0v8Z" />
+              </svg>
+              <strong style="color: #1a0a00;">Goutte</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. FREE SERVICES GRID -->
+    <section class="free-services-section">
+      <div class="container">
+        <h2 class="section-title">Dépistages &amp; Examens Proposés</h2>
+        <div class="free-services-grid">
+
+          <div class="free-service-card">
+            <div class="card-header">
+              <div class="card-icon">
+                <!-- Heart icon -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg>
+              </div>
+              <h3>Dépistage Cardiovasculaire</h3>
+            </div>
+            <p>Mesure de la tension artérielle et évaluation du risque cardiovasculaire. Détection précoce de
+              l'hypertension pour mieux prévenir les complications.</p>
+          </div>
+
+          <div class="free-service-card">
+            <div class="card-header">
+              <div class="card-icon">
+                <!-- Blood drop icon -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2C8 8 5 12.5 5 15.5a7 7 0 0014 0C19 12.5 16 8 12 2z" />
+                  <path d="M12 18v-4" />
+                  <path d="M9.5 15.5h5" />
+                </svg>
+              </div>
+              <h3>Dépistage du Diabète</h3>
+            </div>
+            <p>Test de glycémie capillaire et bilan métabolique pour identifier un diabète méconnu ou un prédiabète.
+              Conseils personnalisés sur l'alimentation et l'activité physique.</p>
+          </div>
+
+          <div class="free-service-card">
+            <div class="card-header">
+              <div class="card-icon">
+                <!-- Eye icon -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </div>
+              <h3>Examen de la Vue</h3>
+            </div>
+            <p>Évaluation de l'acuité visuelle par notre ophtalmologue. Détection de troubles courants comme la myopie,
+              la presbytie ou le glaucome débutant.</p>
+          </div>
+
+          <div class="free-service-card">
+            <div class="card-header">
+              <div class="card-icon">
+                <!-- Maternity / baby icon -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M8 12c-3 1-4 4-4 7h16c0-3-1-6-4-7" />
+                  <circle cx="12" cy="17" r="2.5" stroke-dasharray="2 1.5" />
+                </svg>
+              </div>
+              <h3>Échographies Maternelles</h3>
+            </div>
+            <p>Échographies obstétricales gratuites pour toutes les femmes enceintes. Suivi du développement du bébé et
+              détection de complications potentielles.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FAQ SECTION -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">Questions Fréquentes</h2>
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>Qui peut participer à la campagne ?</summary>
+            <div class="faq-answer">
+              Toute personne résidant au Burundi peut participer, sans condition de ressources. La
+              campagne est ouverte à tous — enfants, adultes, personnes âgées, femmes enceintes.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Faut-il un rendez-vous ?</summary>
+            <div class="faq-answer">
+              Non. La campagne est ouverte sans rendez-vous préalable. Venez directement au Centre Médical Bethesda les
+              16 et 17 mars 2026 entre 7h30 et 17h30.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Quels documents apporter ?</summary>
+            <div class="faq-answer">
+              Aucun document obligatoire. Si vous avez un carnet de santé ou des résultats médicaux antérieurs,
+              apportez-les pour faciliter le suivi médical.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Les médicaments sont-ils vraiment gratuits ?</summary>
+            <div class="faq-answer">
+              Oui. Les patients diagnostiqués avec l'hypertension artérielle, le diabète ou la goutte lors de la
+              campagne recevront gratuitement les médicaments appropriés, offerts par le Centre Médical Bethesda.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. LOCATION SECTION -->
+    <section class="acces-section" id="localisation">
+      <div class="acces-inner container">
+        <div>
+          <p class="section-eyebrow">Où Nous Trouver</p>
+          <h2>Accès &amp; Localisation</h2>
+          <div class="acces-details">
+            <div class="acces-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E9A115" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Commune NTAHANGWA, Zone Gihosha, Q. Muyaga (Gasenyi)<br>Avenue Karava N° 3, Bujumbura,
+                Burundi</span>
+            </div>
+            <div class="acces-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E9A115" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>16 – 17 Mars 2026, de 7h30 à 17h30</span>
+            </div>
+            <div class="acces-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E9A115" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg>
+              <span><a href="tel:+25779669002" style="color:rgba(255,255,255,0.85);text-decoration:none;">+257 79 669
+                  002</a></span>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=Commune+NTAHANGWA+Gihosha+Avenue+Karava+Bujumbura" target="_blank"
+            rel="noopener" class="maps-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Voir sur Google Maps
+          </a>
+        </div>
+        <!-- Map pin SVG illustration -->
+        <div class="acces-map" style="border-radius:16px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+          <div id="map" style="width: 100%; height: 280px; display: block;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CTA BAND -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>Ne Manquez Pas Cette Opportunité&nbsp;!</h2>
+        <p>Profitez de deux jours de soins médicaux spécialisés entièrement gratuits pour vous et votre famille. Aucun
+          rendez-vous nécessaire.</p>
+        <a href="#localisation" class="btn btn-accent">Je Participe</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+
+      <!-- Top Bar: CTA -->
+      <div class="footer-top-bar">
+        <a href="contact.html?service=campagne" class="footer-cta-btn">Prendre Rendez-vous</a>
+      </div>
+
+      <!-- 4-Column Links -->
+      <div class="footer-columns">
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services/chirurgie.html">Chirurgie</a>
+          <a href="services/gynecologie.html">Gynécologie</a>
+          <a href="services/pediatrie.html">Pédiatrie</a>
+          <a href="services/ophtalmologie.html">Ophtalmologie</a>
+          <a href="services/nephrologie.html">Néphrologie</a>
+          <a href="services/endocrinologie.html">Endocrinologie</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Nos Services</a>
+          <a href="campagne.html">Campagne 2026</a>
+          <a href="a-propos.html">À Propos</a>
+          <a href="contact.html?service=campagne">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+25779669002">+257 79 669 002</a>
+          <a href="tel:+25777526626">+257 77 526 626</a>
+          <a href="tel:+25767866275">+257 67 866 275</a>
+          <a href="mailto:bethesda2026centremedical@gmail.com">bethesda2026centremedical@gmail.com</a>
+          <span class="footer-info">Commune NTAHANGWA, Zone Gihosha<br>Avenue Karava N° 3, Bujumbura</span>
+        </div>
+
+        <div class="footer-col">
+          <h4>Aide</h4>
+          <a href="contact.html?service=campagne">Prendre Rendez-vous</a>
+          <a href="campagne.html">Campagne Gratuite</a>
+          <a href="a-propos.html">Notre Mission</a>
+          <a href="politique-de-confidentialite.html">Confidentialité</a>
+          <a href="conditions-generales.html">Conditions</a>
+          <a href="https://maps.google.com/?q=J9WQ%2BQQR+Bujumbura" target="_blank" rel="noopener">Nous Trouver</a>
+          <a href="/login">Espace Secrétariat</a>
+        </div>
+
+      </div>
+
+      <!-- Back to Top -->
+      <div class="footer-back-top">
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+          Retour en haut
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5" />
+            <path d="M5 12l7-7 7 7" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="container">
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <p>© 2026 Centre Médical Bethesda — Bujumbura, Burundi.
+            <a href="politique-de-confidentialite.html"
+              style="text-decoration: underline; margin-left: 10px;">Confidentialité</a> |
+            <a href="conditions-generales.html" style="text-decoration: underline; margin-left: 5px;">Conditions</a>
+          </p>
+        </div>
+        <div class="footer-bottom-right">
+          <a href="https://www.facebook.com/centremedicalbethesda" class="social-link" aria-label="Facebook"
+            target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+            </svg>
+          </a>
+          <a href="https://wa.me/25779669002" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/cm_bethesda" class="social-link" aria-label="Instagram" target="_blank"
+            rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/mapbox-animation.js"></script>
+
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/25779669002" class="floating-whatsapp" target="_blank" rel="noopener"
+    aria-label="Contactez-nous sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.662-2.062-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+    </svg>
+  </a>
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147937804.js"></script>
+  <!-- End of HubSpot Embed Code -->
+  <!-- WhatsApp Float -->
+  <a class="whatsapp-float" href="https://wa.me/25779669002" target="_blank" rel="noopener noreferrer" aria-label="Discuter sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</body>
+
+</html>

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KMPRK2CF');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17978379720"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17978379720');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Nos Services & Spécialités Médicales — Centre Médical Bethesda</title>
+  <meta name="description"
+    content="Découvrez nos spécialités médicales à Bujumbura : chirurgie, gynécologie, pédiatrie, ophtalmologie, néphrologie et endocrinologie. Soins de qualité pour tous.">
+  <meta name="keywords"
+    content="spécialités médicales, chirurgie Bujumbura, pédiatre Burundi, gynécologue, ophtalmologue, néphrologue, soins spécialisés">
+  <meta name="author" content="Centre Médical Bethesda">
+  <link rel="canonical" href="https://www.cmbethesda.com/services.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cmbethesda.com/services.html">
+  <meta property="og:title" content="Nos Services & Spécialités Médicales — Centre Médical Bethesda">
+  <meta property="og:description"
+    content="Six spécialités médicales réunies à Bujumbura : chirurgie, gynécologie, pédiatrie, ophtalmologie, néphrologie et endocrinologie.">
+  <meta property="og:image" content="https://www.cmbethesda.com/images/facebook-cover.png">
+  <meta property="og:site_name" content="Centre Médical Bethesda">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.cmbethesda.com/services.html">
+  <meta name="twitter:title" content="Spécialités Médicales — Centre Médical Bethesda">
+  <meta name="twitter:description"
+    content="Des équipes spécialisées pour des soins accessibles et de qualité à Bujumbura.">
+  <meta name="twitter:image" content="https://www.cmbethesda.com/images/facebook-cover.png">
+
+  <!-- Favicon & Styles -->
+  <meta name="theme-color" content="#1B4332">
+  <link rel="icon" type="image/png" href="images/favicon_1.png?v=3">
+  <link rel="apple-touch-icon" href="images/favicon_1.png?v=3">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@32,400,0,0&display=swap" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  <style>
+    /* ── Services page overrides ── */
+
+    /* 1. Campaign Strip -> LIGHT */
+    .campaign-strip {
+      background: var(--color-bg-warm);
+      padding-block: var(--space-12);
+      color: var(--color-mid);
+    }
+
+    .campaign-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-8);
+      flex-wrap: wrap;
+    }
+
+    .campaign-strip-text {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .campaign-strip .section-eyebrow {
+      color: var(--color-primary);
+    }
+
+    .campaign-strip-text h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: var(--color-dark);
+      margin-bottom: var(--space-3);
+      font-weight: 700;
+    }
+
+    .campaign-strip-text p {
+      color: var(--color-mid);
+      font-size: var(--text-base);
+      line-height: 1.65;
+    }
+
+    .campaign-strip-date {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      margin-top: var(--space-4);
+      color: var(--color-primary);
+      font-weight: 600;
+      font-size: var(--text-sm);
+    }
+
+    .campaign-strip-action {
+      flex-shrink: 0;
+    }
+
+    /* 2. Services Grid -> DARK */
+    #services-grid {
+      background: var(--color-campaign-bg);
+      padding-block: var(--space-20);
+    }
+
+    #services-grid .section-eyebrow {
+      color: var(--color-accent-lt);
+    }
+
+    #services-grid .section-title {
+      color: var(--color-white);
+    }
+
+    #services-grid .section-subtitle {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .services-grid-layout {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+
+    .service-card {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .service-card:hover {
+      background: rgba(255, 255, 255, 0.03);
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .service-card-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .service-card-icon span.material-symbols-outlined {
+      font-size: 32px;
+      color: var(--color-accent-lt);
+      /* Makes it pop against the dark background */
+    }
+
+    .service-card-title {
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--color-white);
+    }
+
+    .service-card-desc {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: var(--text-sm);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      color: var(--color-primary-lt);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      transition: gap var(--transition), color var(--transition);
+      margin-top: auto;
+    }
+
+    .service-card:hover .card-link {
+      gap: var(--space-3);
+      color: var(--color-accent-lt);
+    }
+
+    /* 3. CTA Band -> LIGHT */
+    .cta-band {
+      background: var(--color-white);
+      color: var(--color-mid);
+    }
+
+    .cta-band h2 {
+      color: var(--color-dark) !important;
+    }
+
+    .cta-band p {
+      color: var(--color-mid) !important;
+    }
+
+    /* Extra button styles for light background */
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--color-dark);
+      border: 2px solid var(--color-border);
+      padding: 0.8rem 1.8rem;
+      border-radius: var(--radius-full);
+      font-size: var(--text-base);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      white-space: nowrap;
+    }
+
+    .btn-outline-dark:hover {
+      background: var(--color-bg-warm);
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    @media (max-width: 900px) {
+      .services-grid-layout {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 580px) {
+      .services-grid-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1483412680011645');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1483412680011645&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMPRK2CF" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- TOP CTA BAR -->
+  <div class="top-bar">
+    <span class="top-bar-phone"><span class="top-bar-label">📞 Appelez ou SMS :</span> <a href="contact.html">+257 79 669 002</a></span>
+    <span class="top-bar-sep" aria-hidden="true">|</span>
+    <a href="contact.html">Prendre RDV →</a>
+    <span class="top-bar-sep" aria-hidden="true">|</span>
+    <a href="campagne.html" class="top-bar-campaign">🎁 Campagne Gratuite →</a>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" style="display: flex; align-items: center;">
+        <img src="images/logo-white-bg.webp" alt="Centre Médical Bethesda Logo" class="brand-logo" />
+      </a>
+      <nav class="desktop-nav">
+        <div class="nav-dropdown">
+          <a class="nav-link" tabindex="0">Nos Services <svg class="dropdown-arrow" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
+          <div class="dropdown-menu">
+            <a href="services/chirurgie.html">Chirurgie</a>
+            <a href="services/gynecologie.html">Gynécologie</a>
+            <a href="services/pediatrie.html">Pédiatrie</a>
+            <a href="services/ophtalmologie.html">Ophtalmologie</a>
+            <a href="services/nephrologie.html">Néphrologie</a>
+            <a href="services/endocrinologie.html">Endocrinologie-diabétologie</a>
+          </div>
+        </div>
+        <a href="campagne.html" class="nav-link">Campagne <span class="nav-badge">Gratuit</span></a>
+        <a href="a-propos.html" class="nav-link">À Propos</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-accent btn-sm">Prendre RDV</a>
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <div class="mobile-services-group">
+        <button class="mobile-services-toggle">Nos Services <svg class="dropdown-arrow" width="16" height="16"
+            viewBox="0 0 12 12" fill="none">
+            <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg></button>
+        <div class="mobile-services-submenu">
+          <a href="services/chirurgie.html">Chirurgie</a>
+          <a href="services/gynecologie.html">Gynécologie</a>
+          <a href="services/pediatrie.html">Pédiatrie</a>
+          <a href="services/ophtalmologie.html">Ophtalmologie</a>
+          <a href="services/nephrologie.html">Néphrologie</a>
+          <a href="services/endocrinologie.html">Endocrinologie-diabétologie</a>
+        </div>
+      </div>
+      <a href="campagne.html">Campagne Médicale</a>
+      <a href="a-propos.html">À Propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-accent"
+        style="margin-top:0.5rem;text-align:center;justify-content:center;">Prendre Rendez-vous</a>
+    </nav>
+  </header>
+
+  <!-- SUB-HERO — dark green, establishes brand -->
+  <section class="sub-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Nos Services</p>
+      <h1>Explorez Nos Services</h1>
+      <p class="sub-hero-subtitle">Six spécialités médicales sous un même toit — pour vous et votre famille à Bujumbura.
+      </p>
+    </div>
+  </section>
+
+  <!-- CAMPAIGN FEATURED STRIP — accent dark green, attention-grabbing -->
+  <section class="campaign-strip">
+    <div class="container campaign-strip-inner">
+      <div class="campaign-strip-text">
+        <p class="section-eyebrow">Événement à ne pas manquer</p>
+        <h2>Campagne Médicale Gratuite — Mars 2026</h2>
+        <p>Le Centre Médical Bethesda organise sa grande campagne annuelle de consultations et de dépistage gratuits.
+          Diabète, tension artérielle, vue, santé rénale — venez vous faire dépister sans frais. À toute la
+          population burundaise.</p>
+        <p class="campaign-strip-date">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          Mars 2026 — Dates et lieu à confirmer
+        </p>
+      </div>
+      <div class="campaign-strip-action">
+        <a href="campagne.html" class="btn btn-primary">Voir les Détails</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID — clean white background, cards pop up -->
+  <section class="section" id="services-grid">
+    <div class="container">
+      <p class="section-eyebrow">Spécialités Médicales</p>
+      <h2 class="section-title">Nos Domaines d'Excellence</h2>
+      <p class="section-subtitle">Des équipes spécialisées, un accompagnement personnalisé, des équipements adaptés —
+        pour des soins de qualité accessibles à toute la population du Burundi.</p>
+
+      <div class="services-grid-layout">
+
+        <!-- Chirurgie -->
+        <a href="services/chirurgie.html" class="service-card">
+          <div class="service-card-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">medical_services</span>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Chirurgie</h3>
+            <p class="service-card-desc">Notre équipe chirurgicale réalise des interventions programmées et d'urgence
+              dans un bloc opératoire équipé aux normes. Chirurgie générale, digestive et réparatrice assurées par des
+              chirurgiens expérimentés.</p>
+            <span class="card-link">En savoir plus <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+        </a>
+
+        <!-- Gynécologie -->
+        <a href="services/gynecologie.html" class="service-card">
+          <div class="service-card-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">pregnant_woman</span>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Gynécologie</h3>
+            <p class="service-card-desc">Suivi gynécologique, consultations prénatales et prise en charge des grossesses
+              à risque. Notre spécialiste accompagne chaque femme avec bienveillance, de la prévention à l'accouchement.
+            </p>
+            <span class="card-link">En savoir plus <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+        </a>
+
+        <!-- Pédiatrie -->
+        <a href="services/pediatrie.html" class="service-card">
+          <div class="service-card-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">child_care</span>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Pédiatrie</h3>
+            <p class="service-card-desc">Consultations médicales pour nourrissons, enfants et adolescents. Suivi de
+              croissance, vaccination, gestion des maladies courantes et aiguës dans un cadre bienveillant adapté aux
+              jeunes patients.</p>
+            <span class="card-link">En savoir plus <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+        </a>
+
+        <!-- Ophtalmologie -->
+        <a href="services/ophtalmologie.html" class="service-card">
+          <div class="service-card-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Ophtalmologie</h3>
+            <p class="service-card-desc">Bilan visuel complet, détection et traitement des maladies oculaires
+              (cataracte, glaucome, troubles réfractifs). Nos campagnes de dépistage visuel gratuit touchent des
+              milliers de Burundais chaque année.</p>
+            <span class="card-link">En savoir plus <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+        </a>
+
+        <!-- Néphrologie -->
+        <a href="services/nephrologie.html" class="service-card">
+          <div class="service-card-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">water_drop</span>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Néphrologie</h3>
+            <p class="service-card-desc">Diagnostic et suivi des maladies rénales chroniques et aiguës. Dépistage de
+              l'insuffisance rénale, hypertension artérielle d'origine rénale, et prise en charge des pathologies
+              urinaires complexes.</p>
+            <span class="card-link">En savoir plus <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+        </a>
+
+        <!-- Endocrinologie -->
+        <a href="services/endocrinologie.html" class="service-card">
+          <div class="service-card-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">bloodtype</span>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Endocrinologie-diabétologie</h3>
+            <p class="service-card-desc">Prise en charge complète du diabète (type 1, type 2, gestationnel), des
+              troubles thyroïdiens et des déséquilibres hormonaux. Éducation thérapeutique et suivi régulier pour mieux
+              vivre avec votre maladie.</p>
+            <span class="card-link">En savoir plus <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND — back to dark for strong close -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Prêt à Consulter un Spécialiste ?</h2>
+      <p>Nos médecins sont disponibles pour vous accompagner. Prenez rendez-vous dès aujourd'hui et bénéficiez de soins
+        spécialisés à Bujumbura.</p>
+      <div class="cta-band-actions">
+        <a href="contact.html" class="btn btn-primary">Prendre Rendez-vous</a>
+        <a href="a-propos.html" class="btn-outline-dark">À Propos de Nous</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+
+      <!-- Top Bar: CTA -->
+      <div class="footer-top-bar">
+        <a href="contact.html" class="footer-cta-btn">Prendre Rendez-vous</a>
+      </div>
+
+      <!-- 4-Column Links -->
+      <div class="footer-columns">
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services/chirurgie.html">Chirurgie</a>
+          <a href="services/gynecologie.html">Gynécologie</a>
+          <a href="services/pediatrie.html">Pédiatrie</a>
+          <a href="services/ophtalmologie.html">Ophtalmologie</a>
+          <a href="services/nephrologie.html">Néphrologie</a>
+          <a href="services/endocrinologie.html">Endocrinologie</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Nos Services</a>
+          <a href="campagne.html">Campagne 2026</a>
+          <a href="a-propos.html">À Propos</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+25779669002">+257 79 669 002</a>
+          <a href="tel:+25777526626">+257 77 526 626</a>
+          <a href="tel:+25767866275">+257 67 866 275</a>
+          <a href="mailto:bethesda2026centremedical@gmail.com">bethesda2026centremedical@gmail.com</a>
+          <span class="footer-info">Commune NTAHANGWA, Zone Gihosha<br>Avenue Karava N° 3, Bujumbura</span>
+        </div>
+
+        <div class="footer-col">
+          <h4>Aide</h4>
+          <a href="contact.html">Prendre Rendez-vous</a>
+          <a href="campagne.html">Campagne Gratuite</a>
+          <a href="a-propos.html">Notre Mission</a>
+          <a href="politique-de-confidentialite.html">Confidentialité</a>
+          <a href="conditions-generales.html">Conditions</a>
+          <a href="https://maps.google.com/?q=J9WQ%2BQQR+Bujumbura" target="_blank" rel="noopener">Nous Trouver</a>
+          <a href="/login">Espace Secrétariat</a>
+        </div>
+
+      </div>
+
+      <!-- Back to Top -->
+      <div class="footer-back-top">
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+          Retour en haut
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5" />
+            <path d="M5 12l7-7 7 7" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="container">
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <p>© 2026 Centre Médical Bethesda — Bujumbura, Burundi.
+            <a href="politique-de-confidentialite.html"
+              style="text-decoration: underline; margin-left: 10px;">Confidentialité</a> |
+            <a href="conditions-generales.html" style="text-decoration: underline; margin-left: 5px;">Conditions</a>
+          </p>
+        </div>
+        <div class="footer-bottom-right">
+          <a href="https://www.facebook.com/centremedicalbethesda" class="social-link" aria-label="Facebook"
+            target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+            </svg>
+          </a>
+          <a href="https://wa.me/25779669002" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/cm_bethesda" class="social-link" aria-label="Instagram" target="_blank"
+            rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/25779669002" class="floating-whatsapp" target="_blank" rel="noopener"
+    aria-label="Contactez-nous sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.662-2.062-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+    </svg>
+  </a>
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147937804.js"></script>
+  <!-- End of HubSpot Embed Code -->
+  <!-- WhatsApp Float -->
+  <a class="whatsapp-float" href="https://wa.me/25779669002" target="_blank" rel="noopener noreferrer" aria-label="Discuter sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</body>
+
+</html>
