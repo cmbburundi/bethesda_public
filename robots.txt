@@ -1,4 +1,20 @@
+# Centre Médical Bethesda — https://www.cmbethesda.com
+# Last updated: 2026-03-10
+
 User-agent: *
 Allow: /
 
+# Block admin/internal paths
+Disallow: /login
+Disallow: /dashboard
+Disallow: /api/
+
+# Block non-indexable legal pages (also have meta noindex)
+Disallow: /politique-de-confidentialite
+Disallow: /conditions-generales
+
+# Sitemap
 Sitemap: https://www.cmbethesda.com/sitemap.xml
+
+# Host preference
+Host: https://www.cmbethesda.com

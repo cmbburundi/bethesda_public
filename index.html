@@ -32,11 +32,11 @@
   <meta name="keywords"
     content="clinique Bujumbura, hôpital Bujumbura, centre médical Burundi, médecin Bujumbura, santé, chirurgie, pédiatrie, gynécologie">
   <meta name="author" content="Centre Médical Bethesda">
-  <link rel="canonical" href="https://www.cmbethesda.com/index.html">
+  <link rel="canonical" href="https://www.cmbethesda.com/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.cmbethesda.com/index.html">
+  <meta property="og:url" content="https://www.cmbethesda.com/">
   <meta property="og:title" content="Centre Médical Bethesda — Clinique & Hôpital à Bujumbura">
   <meta property="og:description"
     content="Soins médicaux de qualité et consultations spécialisées (chirurgie, gynécologie, pédiatrie...) à Bujumbura.">
@@ -45,7 +45,7 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://www.cmbethesda.com/index.html">
+  <meta name="twitter:url" content="https://www.cmbethesda.com/">
   <meta name="twitter:title" content="Centre Médical Bethesda — Clinique à Bujumbura">
   <meta name="twitter:description"
     content="Soins médicaux de qualité et consultations spécialisées. Votre santé, notre priorité.">
@@ -61,7 +61,18 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap">
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- Structured Data (JSON-LD) — WebSite (sitelinks search box) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Centre Médical Bethesda",
+    "alternateName": "CMB Bethesda",
+    "url": "https://www.cmbethesda.com"
+  }
+  </script>
+
+  <!-- Structured Data (JSON-LD) — MedicalClinic -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -69,8 +80,10 @@
     "name": "Centre Médical Bethesda",
     "url": "https://www.cmbethesda.com",
     "logo": "https://www.cmbethesda.com/images/logo-white-bg.webp",
+    "image": "https://www.cmbethesda.com/images/facebook-cover.png",
     "description": "Le Centre Médical Bethesda offre des consultations spécialisées en chirurgie, gynécologie, pédiatrie, ophtalmologie, néphrologie et endocrinologie à Bujumbura, Burundi.",
     "telephone": "+257 79 669 002",
+    "email": "bethesda2026centremedical@gmail.com",
     "hasMap": "https://maps.google.com/?q=J9WQ%2BQQR+Bujumbura",
     "address": {
       "@type": "PostalAddress",
@@ -79,10 +92,15 @@
       "addressRegion": "Zone Gihosha, Q. Muyaga (Gasenyi), Commune NTAHANGWA",
       "addressCountry": "BI"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -3.3614,
+      "longitude": 29.3644
+    },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
         "opens": "00:00",
         "closes": "23:59"
       }
@@ -93,6 +111,40 @@
       "https://schema.org/Pediatric",
       "https://schema.org/Optometric",
       "https://schema.org/Endocrine"
+    ],
+    "availableService": [
+      {"@type": "MedicalProcedure", "name": "Chirurgie générale et spécialisée", "url": "https://www.cmbethesda.com/services/chirurgie"},
+      {"@type": "MedicalProcedure", "name": "Gynécologie et obstétrique", "url": "https://www.cmbethesda.com/services/gynecologie"},
+      {"@type": "MedicalProcedure", "name": "Pédiatrie", "url": "https://www.cmbethesda.com/services/pediatrie"},
+      {"@type": "MedicalProcedure", "name": "Ophtalmologie", "url": "https://www.cmbethesda.com/services/ophtalmologie"},
+      {"@type": "MedicalProcedure", "name": "Néphrologie", "url": "https://www.cmbethesda.com/services/nephrologie"},
+      {"@type": "MedicalProcedure", "name": "Endocrinologie-diabétologie", "url": "https://www.cmbethesda.com/services/endocrinologie"}
+    ],
+    "sameAs": [
+      "https://www.facebook.com/centremedicalbethesda",
+      "https://www.instagram.com/cm_bethesda"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data (JSON-LD) — SiteNavigationElement -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Navigation principale",
+    "itemListElement": [
+      {"@type": "SiteNavigationElement", "position": 1, "name": "Accueil", "url": "https://www.cmbethesda.com/"},
+      {"@type": "SiteNavigationElement", "position": 2, "name": "Nos Services", "url": "https://www.cmbethesda.com/services"},
+      {"@type": "SiteNavigationElement", "position": 3, "name": "Campagne Médicale 2026", "url": "https://www.cmbethesda.com/campagne"},
+      {"@type": "SiteNavigationElement", "position": 4, "name": "À Propos", "url": "https://www.cmbethesda.com/a-propos"},
+      {"@type": "SiteNavigationElement", "position": 5, "name": "Contact", "url": "https://www.cmbethesda.com/contact"},
+      {"@type": "SiteNavigationElement", "position": 6, "name": "Chirurgie", "url": "https://www.cmbethesda.com/services/chirurgie"},
+      {"@type": "SiteNavigationElement", "position": 7, "name": "Gynécologie", "url": "https://www.cmbethesda.com/services/gynecologie"},
+      {"@type": "SiteNavigationElement", "position": 8, "name": "Pédiatrie", "url": "https://www.cmbethesda.com/services/pediatrie"},
+      {"@type": "SiteNavigationElement", "position": 9, "name": "Ophtalmologie", "url": "https://www.cmbethesda.com/services/ophtalmologie"},
+      {"@type": "SiteNavigationElement", "position": 10, "name": "Néphrologie", "url": "https://www.cmbethesda.com/services/nephrologie"},
+      {"@type": "SiteNavigationElement", "position": 11, "name": "Endocrinologie-diabétologie", "url": "https://www.cmbethesda.com/services/endocrinologie"}
     ]
   }
   </script>
